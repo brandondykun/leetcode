@@ -1,6 +1,10 @@
-## [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/?envType=study-plan-v2&envId=top-interview-150)
+# [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/?envType=study-plan-v2&envId=top-interview-150)
 
-#### Medium
+### Difficulty: Medium
+
+<br />
+
+## Question
 
 A [trie](https://en.wikipedia.org/wiki/Trie) (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
 
@@ -11,6 +15,9 @@ Implement the Trie class:
 - ```boolean search(String word)``` Returns ```true``` if the string ```word``` is in the trie (i.e., was inserted before), and ```false``` otherwise.
 - ```boolean startsWith(String prefix)``` Returns ```true``` if there is a previously inserted string ```word``` that has the ```prefix``` prefix, and ```false``` otherwise.
  
+<br />
+
+## Examples
 
 #### Example 1:
 Input
