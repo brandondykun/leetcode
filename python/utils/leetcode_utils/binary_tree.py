@@ -48,7 +48,7 @@ class BinaryTreeUtil:
         return root
 
     @staticmethod
-    def tree_to_list_level_order(root: TreeNode) -> list[int]:
+    def tree_to_list_level_order(root: TreeNode | None) -> list[int]:
         """Level-Order Traversal: Layer by layer from top to bottom"""
         if not root:
             return []
@@ -66,6 +66,32 @@ class BinaryTreeUtil:
                 result.append(None)
 
         # Trim trailing None values from the list
+        while result and result[-1] is None:
+            result.pop()
+
+        return result
+
+    @staticmethod
+    def tree_to_list_preorder(root: TreeNode | None) -> list[int | None]:
+        """Preorder Traversal (Root-Left-Right) including null values."""
+        if not root:
+            return []
+
+        result = []
+        # Stack tracks nodes to process; pop from top for depth-first order
+        stack: list[TreeNode | None] = [root]
+
+        while stack:
+            node = stack.pop()
+            if node:
+                result.append(node.val)
+                # Push right first so left is popped and processed first
+                stack.append(node.right)
+                stack.append(node.left)
+            else:
+                result.append(None)
+
+        # Trim trailing None values from the end of the list
         while result and result[-1] is None:
             result.pop()
 
